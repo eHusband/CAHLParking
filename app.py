@@ -5,10 +5,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Define the values to enter
-plate_number = "plate"
-time_required = "2 hours"
-discount_code = "code"
-email_address = "email"
+plate_number = "your_plate" # Update with your License plate here
+time_required = "2 hours" # Set the number of hours
+discount_code = "code" # If you have a discount code update here (this is required for this script to work)
+email_address = "your@email.com" # Set your email if you want it to email you a confirmation
 
 # Set up the WebDriver
 options = webdriver.ChromeOptions()
@@ -66,6 +66,4 @@ try:
 
 finally:
     # Close the browser
-    # driver.quit()
-    body = driver.find_element(By.TAG_NAME, "body")
-    body.click()
+    driver.quit()
